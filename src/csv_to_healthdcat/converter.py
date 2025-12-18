@@ -22,6 +22,8 @@ DCATAP = Namespace("http://data.europa.eu/r5r/")
 VCARD = Namespace("http://www.w3.org/2006/vcard/ns#")
 FOAF = Namespace("http://xmlns.com/foaf/0.1/")
 ADMS = Namespace("http://www.w3.org/ns/adms#")
+CSVW = Namespace("http://www.w3.org/ns/csvw#")
+
 
 
 class CSVToHealthDCAT:
@@ -52,6 +54,7 @@ class CSVToHealthDCAT:
         self.graph.bind("foaf", FOAF)
         self.graph.bind("adms", ADMS)
         self.graph.bind("rdf", RDF)
+        self.graph.bind("csvw", CSVW)
 
     def convert_csv(self, csv_path: str) -> Graph:
         """
